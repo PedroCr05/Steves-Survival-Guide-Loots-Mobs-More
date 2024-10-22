@@ -1,24 +1,25 @@
-const git231931838ignore = require(`../git382094820948ignore/git231931838ignore`);
 const mongoose = require(`mongoose`);
 
 mongoose
   .connect(
-    `mongodb+srv://PedroCr05:${git231931838ignore}@clusters.k4z0f.mongodb.net/mealsAPI?retryWrites=true&w=majority&appName=clusters`
+    `mongodb+srv://PedroCr05:BYKDunqc0UJva1C4@clusters.k4z0f.mongodb.net/minecraft?retryWrites=true&w=majority&appName=clusters`
   )
   .then(() => {
-    console.log(`
-        =================================
-        +=[Connection Success: MongoDB]+=
-        =================================
-        `);
+    console.log(
+      `
+      =================================
+      +=[Connection Success: MongoDB]+=
+      =================================
+      `
+    );
   })
   .catch((e) => {
     console.error(
       `
-        ===============================
-        =+=+=+ERROR SERVER CRASH]=+=+=+
-        ===============================        
-        `,
+      ==================================
+      =+=+=+=[ERROR SERVER CRASH]+=+=+=+
+      ==================================
+      `,
       e.message
     );
   });
