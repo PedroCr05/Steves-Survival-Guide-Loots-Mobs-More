@@ -22,89 +22,61 @@ const main = async () => {
     biomeName: `Nether Wastes`,
   });
 
+  const crimsonForest = await Biome.findOne({
+    biomeName: `Crimson Forest`,
+  });
+
+  const warpedForest = await Biome.findOne({
+    biomeName: `Warped Forest`,
+  });
+
+  const theEnd = await Biome.findOne({
+    biomeName: `The End (Biome)`,
+  });
+
+  const smallEndIslands = await Biome.findOne({
+    biomeName: `Small End Islands`,
+  });
+
+  const endHighlands = await Biome.findOne({
+    biomeName: `End Highlands`,
+  });
+
+  const cherryGrove = await Biome.findOne({
+    biomeName: `Cherry Grove`,
+  });
+
+  const taiga = await Biome.findOne({
+    biomeName: `Taiga Forest`,
+  });
+
+  const lushCaves = await Biome.findOne({
+    biomeName: `Lush Caves`,
+  });
   // Main Content
   const dimensions = [
-    // {
-    //   dimensionName: `Overworld`,
-    //   dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Overworld_1.18.png/revision/latest/scale-to-width-down/1000?cb=20211129031711`,
-    //   dimensionBiomes: [
-    //     deepOcean._id,
-    //     warmOcean._id,
-    //     lukewarmOcean._id,
-    //     deepLukewarmOcean._id,
-    //     coldOcean._id,
-    //     deepColdOcean._id,
-    //     frozenOcean._id,
-    //     deepFrozenOcean._id,
-    //     mushroomFields._id,
-    //     jaggedPeaks._id,
-    //     frozenPeaks._id,
-    //     stonyPeaks._id,
-    //     meadow._id,
-    //     cherryGrove._id,
-    //     grove._id,
-    //     snowySlopes._id,
-    //     windsweptHills._id,
-    //     windsweptGravellyHills._id,
-    //     windsweptForest._id,
-    //     forest._id,
-    //     flowerForest._id,
-    //     taiga._id,
-    //     oldGrowthPineTaiga._id,
-    //     oldGrowthSpruceTaiga._id,
-    //     snowyTaiga._id,
-    //     birchForest._id,
-    //     oldGrowthBirchForest._id,
-    //     darkForest._id,
-    //     jungle._id,
-    //     sparseJungle._id,
-    //     bambooJungle._id,
-    //     paleGarden._id,
-    //     river._id,
-    //     frozenRiver._id,
-    //     swamp._id,
-    //     mangroveSwamp._id,
-    //     beach._id,
-    //     snowyBeach._id,
-    //     stonyShore._id,
-    //     plains._id,
-    //     sunflowerPlains._id,
-    //     snowyPlains._id,
-    //     iceSpikes._id,
-    //     desert._id,
-    //     savanna._id,
-    //     savannaPlateau._id,
-    //     windsweptSavanna._id,
-    //     badlands._id,
-    //     woodedBadlands._id,
-    //     erodedBadlands._id,
-    //     deepDark._id,
-    //     dripStoneCaves._id,
-    //     lushCaves._id,
-    //   ],
-    // },
-    // {
-    //   dimensionName: `The End`,
-    //   dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5c/The_End.png/revision/latest/scale-to-width-down/1000?cb=20201019180500`,
-    //   dimensionBiomes: [
-    //     theEnd._id,
-    //     smallEndIslands._id,
-    //     endMidlands._id,
-    //     endHighlands._id,
-    //     endBarrens._id,
-    //   ],
-    // },
+    {
+      dimensionName: `Overworld`,
+      dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Overworld_1.18.png/revision/latest/scale-to-width-down/1000?cb=20211129031711`,
+      dimensionBiomes: [cherryGrove._id, taiga._id, lushCaves._id],
+    },
+    {
+      dimensionName: `The End`,
+      dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5c/The_End.png/revision/latest/scale-to-width-down/1000?cb=20201019180500`,
+      dimensionBiomes: [theEnd._id, smallEndIslands._id, endHighlands._id],
+    },
     {
       dimensionName: `The Nether`,
       dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/11/Nether.png/revision/latest/scale-to-width-down/1000?cb=20211221091010`,
-      dimensionBiomes: [
-        netherWastes._id,
-        // crimsonForest._id,
-        // WarpedForest._id,
-        // soulSandValley._id,
-        // basaltDeltas._id,
-      ],
+      dimensionBiomes: [netherWastes._id, crimsonForest._id, warpedForest._id],
     },
+    // {
+    //   "DimensionName": "The Aether",
+    //   "dimensionImage":
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIzn2SranPNjcvS_d31fFrlQwAvC6buX13JQ&s",
+    //   "dimensionBiomes": ["testing._id", "notARealBiome._id"],
+    // },
+    // >--->---> The Aether is a mod dimension but again. This will be the example for CRUD :D
   ];
 
   await Dimension.insertMany(dimensions);
