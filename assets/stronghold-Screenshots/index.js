@@ -6,7 +6,7 @@ const screenshot5 = require(`./stronghold5.png`);
 const screenshot6 = require(`./stronghold6.png`);
 const screenshot7 = require(`./stronghold7.png`);
 
-const StrongholdSS = {
+module.exports = {
   screenshot1,
   screenshot2,
   screenshot3,
@@ -15,5 +15,3 @@ const StrongholdSS = {
   screenshot6,
   screenshot7,
 };
-
-module.exports = StrongholdSS;

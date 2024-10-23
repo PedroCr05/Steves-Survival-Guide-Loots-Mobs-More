@@ -1,6 +1,6 @@
 const db = require(`../db`);
 const { Biome, Dimension, Mob } = require(`../models`);
-// const { StrongholdSS } = require(`../assets/stronghold-Screenshots/index`);
+// const { screenshot1 } = require(`../assets/stronghold-Screenshots`);
 
 db.on(
   `error`,
@@ -190,11 +190,11 @@ const main = async () => {
     mobName: `Tropical Fish`,
   });
 
-  const axolotl = await Mob.find({
+  const axolotl = await Mob.findOne({
     mobName: `Axolotl`,
   });
 
-  const silverfish = await Mob.find({
+  const silverfish = await Mob.findOne({
     mobName: `Silverfish`,
   });
   // Main Content
@@ -398,26 +398,19 @@ const main = async () => {
         glowSquid._id,
         tropicalFish._id,
         axolotl._id,
-        silverfish._id,
       ],
-      biomeStructureName: `Stronghold`,
-      // biomeStructureImages: [StrongholdSS],
     },
     // {
     //   "biomeName": "Testing",
     //   "biomeImage": "",
     //   "dimensionBiomeBelongsTo": "aetherDim._id",
-    //   "biomeMobs": ["skeleton._id", "player._id"],
-    //   "biomeStructureName": "",
-    //   "biomeStructureImages": ""
+    //   "biomeMobs": ["skeleton._id"],
     // },
     // {
     //   "biomeName": "Not a Real Biome",
     //   "biomeImage": "",
     //   "dimensionBiomeBelongsTo": "aetherDim._id",
-    //   "biomeMobs": ["skeleton._id", "player._id"],
-    //   "biomeStructureName": "",
-    //   "biomeStructureImages": ""
+    //   "biomeMobs": ["skeleton._id"],
     // }
     // >--->---> Two biomes that will be used for an example for CRUD :D
   ];

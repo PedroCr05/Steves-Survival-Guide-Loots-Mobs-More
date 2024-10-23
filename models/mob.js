@@ -7,6 +7,7 @@ const MobSchema = new Schema({
   isMobHostile: { type: Boolean, required: true },
   isMobNeutral: { type: Boolean, required: true },
   mobTotalHitPoints: { type: Number, required: true },
+  // typeOf: { type: String, required: true },
 });
 
 module.exports = MobSchema;
