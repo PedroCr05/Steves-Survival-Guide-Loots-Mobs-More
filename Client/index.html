@@ -3,16 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Steve's Journal</title>
+    <title>Steve's Survival Guide</title>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="/style.css" />
-    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <header>
+      <section class="title-container">
+        <h1 class="title">Steve's Survival Guide: Dimension, Mobs, & More!</h1>
+      </section>
+    </header>
+    <main>
+      <section class="main">
+        <!-- Dimension Search -->
+        <div>
+          <form class="dimension-container">
+            <input
+              id="dimension"
+              type="text"
+              placeholder="Search Dimensions"
+              class="user-input"
+            />
+            <input
+              id="dimension-submit"
+              type="button"
+              value="Search"
+              class="submit"
+            />
+          </form>
+        </div>
+        <!-- Biome Search -->
+        <div>
+          <form class="biome-container">
+            <input
+              id="biome"
+              type="text"
+              placeholder="Search Biomes"
+              class="user-input"
+            />
+            <input
+              id="biome-submit"
+              type="button"
+              value="Search"
+              class="submit"
+            />
+          </form>
+        </div>
+        <!-- Mob Search -->
+        <div>
+          <form class="mob-container">
+            <input
+              id="mob"
+              type="text"
+              placeholder="Search Mobs"
+              class="user-input"
+            />
+            <input
+              id="mob-submit"
+              type="button"
+              value="Search"
+              class="submit"
+            />
+          </form>
+        </div>
+        <!-- Results Section -->
+        <article class="result-container">
+          <!-- Text Content -->
+          <div class="result-text" id="item-text"></div>
+          <!-- Image Content -->
+          <div class="image-container">
+            <img class="image-itself" id="item-img" src="" alt="" />
+          </div>
+          <!-- Relations Content -->
+          <div class="result-relations" id="item-relations"></div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

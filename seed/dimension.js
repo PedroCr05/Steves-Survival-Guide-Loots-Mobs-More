@@ -57,12 +57,12 @@ const main = async () => {
   const dimensions = [
     {
       dimensionName: `Overworld`,
-      dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Overworld_1.18.png/revision/latest/scale-to-width-down/1000?cb=20211129031711`,
+      dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Overworld_1.18.png/revision/latest/`,
       dimensionBiomes: [cherryGrove._id, taiga._id, lushCaves._id],
     },
     {
       dimensionName: `The End`,
-      dimensionImage: `https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5c/The_End.png/revision/latest/scale-to-width-down/1000?cb=20201019180500`,
+      dimensionImage: `https://minecraft.wiki/w/File:The_End.png#/media/File:The_End.png`,
       dimensionBiomes: [theEnd._id, smallEndIslands._id, endHighlands._id],
     },
     {
