@@ -45,11 +45,11 @@ biomeSearchBttn.addEventListener(`click`, async () => {
       mobHeader.textContent = `Mobs in this Biome:`;
       objRelations.appendChild(mobHeader);
 
-      matchingBiome.biomeMobs.forEach(async (mobSeed) => {
+      matchingBiome.biomeMobs.forEach((mobSeed) => {
         const fetchedData = document.createElement(`p`);
         fetchedData.className = `mobName counter-${classIncrements}`;
         classIncrements++;
-        fetchedData.textContent = await mobSeed.mobName;
+        fetchedData.textContent = mobSeed.mobName;
         objRelations.appendChild(fetchedData);
       });
     } else {
@@ -75,10 +75,10 @@ dimensionSearchBttn.addEventListener(`click`, async () => {
     if (matchingDimension) {
       console.log(matchingDimension);
       objInfo.textContent = `Dimension: ${matchingDimension.dimensionName}`;
-      matchingDimension.dimensionBiomes.forEach(async (dimensionSeed) => {
+      matchingDimension.dimensionBiomes.forEach((dimensionSeed) => {
         const fetchedData = document.createElement(`p`);
         fetchedData.className = `biome-name counter-${classIncrements}`;
-        fetchedData.textContent = await dimensionSeed.biomeName;
+        fetchedData.textContent = dimensionSeed.biomeName;
         objRelations.appendChild(fetchedData);
         classIncrements++;
       });
@@ -108,10 +108,10 @@ mobSearchBttn.addEventListener(`click`, async () => {
       objInfo.textContent = `Mob: ${matchingMob.mobName}`;
       objImg.src = matchingMob.mobImage;
 
-      matchingMob.biomeMobBelongsTo.forEach(async (mobSeed) => {
+      matchingMob.biomeMobBelongsTo.forEach((mobSeed) => {
         const fetchedData = document.createElement(`p`);
         fetchedData.className = `biome-name`;
-        fetchedData.textContent = await `Biome: ${mobSeed.biomeName}`;
+        fetchedData.textContent = await`Biome: ${mobSeed.biomeName}`;
         objRelations.appendChild(fetchedData);
       });
     } else {
