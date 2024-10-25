@@ -45,11 +45,11 @@ biomeSearchBttn.addEventListener(`click`, async () => {
       mobHeader.textContent = `Mobs in this Biome:`;
       objRelations.appendChild(mobHeader);
 
-      matchingBiome.biomeMobs.forEach((mobSeed) => {
+      matchingBiome.biomeMobs.forEach((biomeSeed) => {
         const fetchedData = document.createElement(`p`);
         fetchedData.className = `mobName counter-${classIncrements}`;
         classIncrements++;
-        fetchedData.textContent = mobSeed.mobName;
+        fetchedData.textContent = biomeSeed.mobName;
         objRelations.appendChild(fetchedData);
       });
     } else {

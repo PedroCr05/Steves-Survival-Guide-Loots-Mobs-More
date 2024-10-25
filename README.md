@@ -49,4 +49,16 @@ Ah, the spirit of adventure! If you’re the type who’s keen on discovering _n
 
 ---
 
-# Credits
+### Credits
+
+The biggest MVP that made this project possible!
+
+[The-Minecraft-Wiki](https://minecraft.wiki)
+
+---
+
+Thank you to Slaying the Dragon for the CSS Grid understanding! :D
+
+[Learn CSS Grid - A 13 Minute Deep Dive](https://www.youtube.com/watch?v=EiNiSFIPIQE)
+
+Their socials [Youtube-Channel](https://www.youtube.com/@slayingthedragon) | [Discord-Server](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbDl6SWU3TjdhV1lDSlR1NmdNWGJ5aVNaellIQXxBQ3Jtc0tuUVBNV0hTQWpGQUxpNThuV1pOeE4yaFBRbzF2UERwTVMycWVQVnlTckhDTTVMTUY3UnUxQmlFRnFBQ3Etd2M5OHd0TXhtR2FsdDhuQkpfWjhkQ3lhMzhxdVF4R1JOUEF0MHZBbGIxSWpISk5UeGNhaw&q=https%3A%2F%2Fdiscord.gg%2FCcz9nQSfQB)
