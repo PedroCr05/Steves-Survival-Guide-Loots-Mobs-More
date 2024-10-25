@@ -8,114 +8,117 @@ const objInfo = document.querySelector(`#item-text`);
 const objRelations = document.querySelector(`#item-relations`);
 const objImg = document.querySelector(`#item-img`);
 
-// function searchHandleInput() {
-//   const inputCheck = document.activeElement;
-
-//   if (
-//     inputCheck === biomeSearchHandle ||
-//     inputCheck === dimensionSearchHandle ||
-//     inputCheck === mobSearchHandle
-//   ) {
-//     return inputCheck.value.toLowerCase();
-//   } else {
-//     return ``;
-//   }
-// }
+let classIncrements = 1;
 
 biomeSearchBttn.addEventListener(`click`, async () => {
   const searchHandleInput = biomeSearchHandle.value.toLowerCase();
+  objRelations.innerHTML = "";
 
-  const fetchBiomes = async () => {
-    try {
-      const res = await axios.get(`http://localhost:3000/biomes`);
-      console.log(res.data);
-      const biomes = res.data;
+  try {
+    const res = await axios.get(`http://localhost:3000/biomes`);
+    const matchingBiome = res.data.find(
+      (biome) => biome.biomeName.toLowerCase() === searchHandleInput
+    );
 
-      const matchingBiome = biomes.find(
-        (biomes) => biomes.biomeName.toLowerCase() === searchHandleInput
-      );
+    if (matchingBiome) {
+      console.log(matchingBiome);
 
-      if (matchingBiome) {
-        objInfo.textContent = `Biome: ${matchingBiome.biomeName}`;
-        objRelations.textContent = `Dimension: ${matchingBiome.dimensionBiomeBelongsTo}`;
+      objImg.src = matchingBiome.biomeImage;
 
-        const addingMobs = objRelations.appendChild(
-          document.createElement(`p`)
-        );
-        addingMobs.className = `mob-list`;
-        addingMobs.textContent = matchingBiome.biomeMobs;
+      const biomeHeader = document.createElement(`h1`);
+      biomeHeader.className = `biome-h1`;
+      biomeHeader.textContent = `Biome:`;
+      objInfo.appendChild(biomeHeader);
 
-        objImg.src = matchingBiome.biomeImage;
-      } else {
-        objInfo.textContent = `404 Error | Biome not found.`;
-        objRelations.textContent = ``;
-        objImg.src = ``;
-      }
-    } catch (e) {
-      console.error(`404 Error | Could not get Biomes:`, e);
+      const biomeName = document.createElement(`h2`);
+      biomeName.className = `name-of-biome`;
+      biomeName.textContent = matchingBiome.biomeName;
+      objInfo.appendChild(biomeName);
+
+      const header = document.createElement(`h2`);
+      header.className = `relations-h2`;
+      header.textContent = `More information about the biome:`;
+      objRelations.appendChild(header);
+
+      const mobHeader = document.createElement(`h3`);
+      mobHeader.className = `mob-h3`;
+      mobHeader.textContent = `Mobs in this Biome:`;
+      objRelations.appendChild(mobHeader);
+
+      matchingBiome.biomeMobs.forEach(async (mobSeed) => {
+        const fetchedData = document.createElement(`p`);
+        fetchedData.className = `mobName counter-${classIncrements}`;
+        classIncrements++;
+        fetchedData.textContent = await mobSeed.mobName;
+        objRelations.appendChild(fetchedData);
+      });
+    } else {
+      objInfo.textContent = `404 Error | Biome not found.`;
+      objImg.src = ``;
     }
-  };
-
-  fetchBiomes();
+    classIncrements = 0;
+  } catch (e) {
+    console.error(`Error | Could not get Biomes:`, e);
+  }
 });
 
 dimensionSearchBttn.addEventListener(`click`, async () => {
   const searchHandleInput = dimensionSearchHandle.value.toLowerCase();
+  objRelations.innerHTML = "";
 
-  const fetchDimensions = async () => {
-    try {
-      const res = await axios.get(`http://localhost:3000/dimensions`);
-      console.log(res.data);
-      const dimensions = res.data;
+  try {
+    const res = await axios.get(`http://localhost:3000/dimensions`);
+    const matchingDimension = res.data.find(
+      (dimension) => dimension.dimensionName.toLowerCase() === searchHandleInput
+    );
 
-      const matchingDimension = dimensions.find(
-        (dimension) =>
-          dimension.dimensionName.toLowerCase() === searchHandleInput
-      );
+    if (matchingDimension) {
+      console.log(matchingDimension);
+      objInfo.textContent = `Dimension: ${matchingDimension.dimensionName}`;
+      matchingDimension.dimensionBiomes.forEach(async (dimensionSeed) => {
+        const fetchedData = document.createElement(`p`);
+        fetchedData.className = `biome-name counter-${classIncrements}`;
+        fetchedData.textContent = await dimensionSeed.biomeName;
+        objRelations.appendChild(fetchedData);
+        classIncrements++;
+      });
 
-      if (matchingDimension) {
-        objInfo.textContent = `Dimension: ${matchingDimension.dimensionName}`;
-        objRelations.textContent = `Biomes: ${matchingDimension.dimensionBiomes.join(
-          `, `
-        )}`;
-        objImg.src = matchingDimension.dimensionImage;
-      } else {
-        objInfo.textContent = `404 Error | Dimension not found.`;
-        objRelations.textContent = ``;
-        objImg.src = ``;
-      }
-    } catch (e) {
-      console.error(`404 Error | Could not get Dimensions:`, e);
+      objImg.src = matchingDimension.dimensionImage;
+    } else {
+      objInfo.textContent = `404 Error | Dimension not found.`;
+      objImg.src = ``;
     }
-  };
-
-  fetchDimensions();
+  } catch (e) {
+    console.error(`Error | Could not get Dimensions:`, e);
+  }
 });
 
 mobSearchBttn.addEventListener(`click`, async () => {
   const searchHandleInput = mobSearchHandle.value.toLowerCase();
+  objRelations.innerHTML = "";
 
-  const fetchMobs = async () => {
-    try {
-      const res = await axios.get(`http://localhost:3000/mobs`);
-      console.log(res.data);
-      const mobs = res.data;
+  try {
+    const res = await axios.get(`http://localhost:3000/mobs`);
+    const matchingMob = res.data.find(
+      (mob) => mob.mobName.toLowerCase() === searchHandleInput
+    );
 
-      const matchingMob = mobs.find(
-        (mob) => mob.mobName.toLowerCase() === searchHandleInput
-      );
+    if (matchingMob) {
+      console.log(matchingMob);
+      objInfo.textContent = `Mob: ${matchingMob.mobName}`;
+      objImg.src = matchingMob.mobImage;
 
-      if (matchingMob) {
-        objInfo.textContent = `Mob: ${matchingMob.mobName}`;
-        objRelations.textContent = `Biomes: ${matchingMob.biomeMobBelongsTo}`;
-        objImg.src = matchingMob.mobImage;
-      } else {
-        objInfo.textContent = `404 Error | Mob not found.`;
-        (objRelations.textContent = ``), (objImg.src = ``);
-      }
-    } catch (e) {
-      console.log(`404 Error | Could not get Mobs:`, e);
+      matchingMob.biomeMobBelongsTo.forEach(async (mobSeed) => {
+        const fetchedData = document.createElement(`p`);
+        fetchedData.className = `biome-name`;
+        fetchedData.textContent = await `Biome: ${mobSeed.biomeName}`;
+        objRelations.appendChild(fetchedData);
+      });
+    } else {
+      objInfo.textContent = `404 Error | Mob not found.`;
+      objImg.src = ``;
     }
-  };
-  fetchMobs();
+  } catch (e) {
+    console.error(`Error | Could not get Mobs:`, e);
+  }
 });

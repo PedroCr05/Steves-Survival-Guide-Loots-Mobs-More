@@ -246,7 +246,7 @@ const main = async () => {
     {
       biomeName: `Warped Forest`,
       biomeImage: `https://minecraft.wiki/images/thumb/Warped_Forest.png/250px-Warped_Forest.png?782e4`,
-      dimension: netherDim._id,
+      dimensionBiomeBelongsTo: netherDim._id,
       biomeMobs: [enderman._id, strider._id],
       biomeStructureName: `Ruined Portal`,
       biomeStructureImages: [
@@ -270,19 +270,19 @@ const main = async () => {
     {
       biomeName: `The End (Biome)`,
       biomeImage: `https://minecraft.wiki/images/thumb/The_End.png/250px-The_End.png?cc597`,
-      dimension: endDim._id,
+      dimensionBiomeBelongsTo: endDim._id,
       biomeMobs: enderman._id,
     },
     {
       biomeName: `Small End Islands`,
       biomeImage: `https://minecraft.wiki/images/thumb/Small_End_Islands.png/250px-Small_End_Islands.png?20554`,
-      dimension: endDim._id,
+      dimensionBiomeBelongsTo: endDim._id,
       biomeMobs: enderman._id,
     },
     {
       biomeName: `End Highlands`,
       biomeImage: `https://minecraft.wiki/images/End_Highlands.png?b5640`,
-      dimension: endDim._id,
+      dimensionBiomeBelongsTo: endDim._id,
       biomeMobs: [enderman._id, shulker._id],
       biomeStructureName: `End City`,
       biomeStructureImages: [
@@ -312,7 +312,7 @@ const main = async () => {
     {
       biomeName: `Cherry Grove`,
       biomeImage: `https://minecraft.wiki/images/thumb/Cherry_Grove.png/250px-Cherry_Grove.png?9e30e`,
-      dimension: overworldDim._id,
+      dimensionBiomeBelongsTo: overworldDim._id,
       biomeMobs: [
         creeper._id,
         // skeleton._id,
@@ -344,7 +344,7 @@ const main = async () => {
     {
       biomeName: `Taiga Forest`,
       biomeImage: `https://minecraft.wiki/images/thumb/Taiga.png/250px-Taiga.png?a3b2c`,
-      dimension: overworldDim._id,
+      dimensionBiomeBelongsTo: overworldDim._id,
       biomeMobs: [
         creeper._id,
         // skeleton._id,

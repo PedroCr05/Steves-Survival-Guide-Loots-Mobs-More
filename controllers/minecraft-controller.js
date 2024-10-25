@@ -2,7 +2,9 @@ const { Biome, Dimension, Mob } = require(`../models`);
 
 const getAllBiomes = async (req, res) => {
   try {
-    const biomes = await Biome.find({});
+    const biomes = await Biome.find({})
+      .populate(`biomeMobs`)
+      .populate(`dimensionBiomeBelongsTo`);
     res.json(biomes);
   } catch (e) {
     return res.status(500).send(e.message);
@@ -11,7 +13,7 @@ const getAllBiomes = async (req, res) => {
 
 const getAllDimensions = async (req, res) => {
   try {
-    const dimensions = await Dimension.find({});
+    const dimensions = await Dimension.find({}).populate(`dimensionBiomes`);
     res.json(dimensions);
   } catch (e) {
     return res.status(500).send(e.message);
@@ -20,7 +22,7 @@ const getAllDimensions = async (req, res) => {
 
 const getAllMobs = async (req, res) => {
   try {
-    const mobs = await Mob.find({});
+    const mobs = await Mob.find({}).populate(`biomeMobBelongsTo`);
     res.json(mobs);
   } catch (e) {
     return res.status(500).send(e.message);

@@ -1,0 +1,216 @@
+body {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(11, 5rem);
+  grid-template-rows: repeat(11, 5rem);
+  background-color: gray;
+}
+
+header {
+  grid-column: 2/11;
+  grid-row: 1/2;
+}
+
+.title-container {
+  display: flex;
+  text-align: center;
+  font-size: 1.25rem;
+  justify-content: center;
+}
+
+.title {
+  color: cyan;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  padding: 1rem 3rem 1rem 3rem;
+}
+
+nav {
+  grid-column: 2/11;
+  grid-row: 3/4;
+}
+
+.search-handlers-container {
+  display: grid;
+  grid-template-columns: repeat(9, 5rem);
+  grid-template-rows: 3rem;
+}
+
+.dimension-container {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.biome-container {
+  grid-column: 4/7;
+  grid-row: 1/2;
+}
+
+.mob-container {
+  grid-column: 7/10;
+  grid-row: 1/2;
+}
+
+.dimension-form {
+  display: grid;
+  grid-template-columns: 15rem;
+  grid-template-rows: repeat(2, 5rem);
+}
+
+.biome-form {
+  display: grid;
+  grid-template-columns: 15rem;
+  grid-template-rows: repeat(2, 5rem);
+}
+
+.mob-form {
+  display: grid;
+  grid-template-columns: 15rem;
+  grid-template-rows: repeat(2, 5rem);
+}
+
+.user-input {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 1rem;
+  text-align: center;
+  margin: 2rem 1rem 1rem 1rem;
+  background-color: antiquewhite;
+}
+
+.submit {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: center;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 5.8rem;
+}
+
+main {
+  grid-column: 2/11;
+  grid-row: 4/-1;
+}
+
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(18, 2.5rem);
+  grid-template-rows: repeat(16, 2.5rem);
+}
+
+.image-container {
+  justify-self: center;
+  grid-column: 12/18;
+  grid-row: 2/-8;
+}
+
+.image-itself {
+  border: 1px solid black;
+}
+
+.result-relations {
+  grid-row: 9/17;
+  grid-column: 1/19;
+  display: grid;
+  grid-template-columns: repeat(18, 2.5rem);
+  grid-template-rows: repeat(8, 2.5rem);
+}
+
+.relations-h2 {
+  grid-row: 2/4;
+  grid-column: 1/12;
+  text-align: end;
+  justify-self: left;
+  font-size: larger;
+}
+
+.mob-h3 {
+  grid-row: 4/6;
+  grid-column: 1/7;
+  justify-self: left;
+  align-self: end;
+  font-size: large;
+}
+
+.counter-1 {
+  grid-row: 6/8;
+  grid-column: 1/4;
+  align-self: top;
+  justify-self: right;
+  font-size: medium;
+}
+
+.counter-2 {
+  grid-row: 6/8;
+  grid-column: 4/7;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.counter-3 {
+  grid-row: 6/8;
+  grid-column: 7/10;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.counter-4 {
+  grid-row: 6/8;
+  grid-column: 10/13;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.counter-5 {
+  grid-row: 6/8;
+  grid-column: 13/16;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.counter-6 {
+  grid-row: 6/8;
+  grid-column: 16/19;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.counter-7 {
+  grid-row: 6/8;
+  grid-column: 19/22;
+  align-self: top;
+  justify-self: center;
+  font-size: medium;
+}
+
+.result-text {
+  grid-row: 2/8;
+  grid-column: 1/11;
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: repeat(10, 2.5rem);
+  grid-template-rows: repeat(7, 2.5rem);
+}
+
+.biome-h1 {
+  grid-row: 1/4;
+  grid-column: 1/5;
+  font-size: 3rem;
+  justify-self: left;
+  align-self: top;
+}
+
+.name-of-biome {
+  grid-row: 1/4;
+  grid-column: 5/11;
+  font-size: 2rem;
+  justify-self: center;
+  align-self: end;
+}
