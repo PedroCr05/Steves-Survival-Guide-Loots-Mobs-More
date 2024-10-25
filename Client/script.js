@@ -7,6 +7,7 @@ const mobSearchBttn = document.querySelector(`#mob-submit`);
 const objInfo = document.querySelector(`#item-text`);
 const objRelations = document.querySelector(`#item-relations`);
 const objImg = document.querySelector(`#item-img`);
+const changeOpacity = document.querySelector(`.image-itself`);
 
 let classIncrements = 1;
 
@@ -24,6 +25,7 @@ biomeSearchBttn.addEventListener(`click`, async () => {
       console.log(matchingBiome);
 
       objImg.src = matchingBiome.biomeImage;
+      changeOpacity.style.opacity = 1;
 
       const biomeHeader = document.createElement(`h1`);
       biomeHeader.className = `biome-h1`;

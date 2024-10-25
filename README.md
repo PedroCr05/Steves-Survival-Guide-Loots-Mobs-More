@@ -62,3 +62,11 @@ Thank you to Slaying the Dragon for the CSS Grid understanding! :D
 [Learn CSS Grid - A 13 Minute Deep Dive](https://www.youtube.com/watch?v=EiNiSFIPIQE)
 
 Their socials [Youtube-Channel](https://www.youtube.com/@slayingthedragon) | [Discord-Server](https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbDl6SWU3TjdhV1lDSlR1NmdNWGJ5aVNaellIQXxBQ3Jtc0tuUVBNV0hTQWpGQUxpNThuV1pOeE4yaFBRbzF2UERwTVMycWVQVnlTckhDTTVMTUY3UnUxQmlFRnFBQ3Etd2M5OHd0TXhtR2FsdDhuQkpfWjhkQ3lhMzhxdVF4R1JOUEF0MHZBbGIxSWpISk5UeGNhaw&q=https%3A%2F%2Fdiscord.gg%2FCcz9nQSfQB)
+
+Handy images I've used for this project.
+
+[Stone-Texture](https://www.istockphoto.com/vector/pixel-minecraft-style-stone-block-background-concept-of-game-pixelated-seamless-gm1300167321-392576582)
+
+[Birch-Plank](https://minecraft.novaskin.me/post/6283563094/birchplanks)
+
+[Polished-Blackstone](https://www.reddit.com/r/Minecraft/comments/hzohu3/some_nether_update_textures_i_made_from_existing/)

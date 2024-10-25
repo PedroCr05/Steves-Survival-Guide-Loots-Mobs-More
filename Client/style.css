@@ -3,7 +3,7 @@ body {
   justify-content: center;
   grid-template-columns: repeat(11, 5rem);
   grid-template-rows: repeat(11, 5rem);
-  background-color: gray;
+  background-image: url(../assets/images/background/thumb-1920-473168.jpg);
 }
 
 header {
@@ -20,7 +20,8 @@ header {
 
 .title {
   color: cyan;
-  border: 0.2rem solid black;
+  border: 0.2rem solid cyan;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 1rem 3rem 1rem 3rem;
 }
@@ -28,6 +29,12 @@ header {
 nav {
   grid-column: 2/11;
   grid-row: 3/4;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border: 0.2rem cyan solid;
+  border-bottom: 0;
+  z-index: 2;
 }
 
 .search-handlers-container {
@@ -75,7 +82,18 @@ nav {
   margin: 1rem;
   text-align: center;
   margin: 2rem 1rem 1rem 1rem;
-  background-color: antiquewhite;
+}
+
+#dimension-submit {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvin7CelLl9Y2jOYd5sw-TPzxbnOqUS3MkUkWySy10b1S9rAC7UqqJnw9PY-7JXpvn5EU&usqp=CAU);
+}
+
+#biome-submit {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQ_XAQBEJBQKTFPGRhdQQSZVsUZw_wVeNZvfHDyk7-4U4JQokARzp2aioDPQlBwNewrw&usqp=CAU);
+}
+
+#mob-submit {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdLaN8H7h0zq8NbkcChdXhVaCNpMYZ3_3IkPmc80sUo_kcAut0RW12sak_YAvFDxs5IAc&usqp=CAU);
 }
 
 .submit {
@@ -92,12 +110,19 @@ nav {
 main {
   grid-column: 2/11;
   grid-row: 4/-1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  color: cyan;
+  border: 0.2rem cyan solid;
+  border-top: 0rem;
 }
 
 .result-container {
   display: grid;
   grid-template-columns: repeat(18, 2.5rem);
   grid-template-rows: repeat(16, 2.5rem);
+  margin-left: 2rem;
 }
 
 .image-container {
@@ -107,7 +132,9 @@ main {
 }
 
 .image-itself {
-  border: 1px solid black;
+  border: 0.15rem solid cyan;
+  opacity: 0;
+  margin-right: 3rem;
 }
 
 .result-relations {
